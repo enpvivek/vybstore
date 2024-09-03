@@ -1,10 +1,11 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <div
-      className=" flex flex-row container justify-between w-[1200px] fixed text-body1
+      className="flex flex-row container justify-between w-[1200px] fixed text-body1
         backdrop-blur-md
         h-20
         my-[12px]
@@ -16,13 +17,13 @@ const Header = () => {
         items-center"
     >
       <div className="flex flex-row items-center">
-        <div>
+        <Link to="/" className="flex items-center">
           <img
             src="/Images/logo.svg"
             alt="YB Store Logo"
             className="h-12 w-auto"
           />
-        </div>
+        </Link>
         <div>
           <input
             type="text"
@@ -33,14 +34,22 @@ const Header = () => {
         </div>
       </div>
       <div className="flex flex-row gap-16">
-        <div>Contact Us</div>
-        <div>About Us</div>
-        <div>Policies</div>
+        <Link to="/contact" className="cursor-pointer">
+          Contact Us
+        </Link>
+        <Link to="/about" className="cursor-pointer">
+          About Us
+        </Link>
+        <Link to="/policies" className="cursor-pointer">
+          Policies
+        </Link>
       </div>
       <div>
-        <button className="rounded-xl bg-[#ffffff] px-8 py-1 border-2 border-[#a8a8a8] bg-white text-[#003c3c]">
-          Login
-        </button>
+        <Link to="/login">
+          <button className="rounded-xl bg-[#ffffff] px-8 py-2 border-2 border-[#a9a9a9] bg-white text-[#003c3c]">
+            Login
+          </button>
+        </Link>
       </div>
     </div>
   );

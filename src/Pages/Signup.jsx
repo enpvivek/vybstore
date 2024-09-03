@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -104,9 +105,12 @@ const Login = () => {
           <div className="flex justify-center">
             <p className="flex ">
               Already have an account?{" "}
-              <span className="text-[#003c3c] text-body1 mx-1  cursor-pointer">
+              <Link
+                to="/login"
+                className="text-[#003c3c] text-body1 mx-1  cursor-pointer"
+              >
                 Login
-              </span>
+              </Link>
             </p>
           </div>
         </div>
