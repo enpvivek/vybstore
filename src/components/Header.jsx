@@ -37,7 +37,7 @@ const Header = () => {
         <Link to="/contact" className="cursor-pointer">
           Contact Us
         </Link>
-        <Link to="/about" className="cursor-pointer">
+        <Link to="/profile" className="cursor-pointer">
           About Us
         </Link>
         <Link to="/policies" className="cursor-pointer">
